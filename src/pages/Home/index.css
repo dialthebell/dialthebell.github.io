@@ -1,0 +1,94 @@
+.home-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.nav-buttons {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.oval-link {
+  width: 100vw;
+  position: relative;
+  text-decoration: none;
+  margin: 20px 0;
+}
+
+.oval-sub-link {
+  position: absolute;
+  width: 17vw;
+  height: auto;
+  cursor: pointer;
+  text-decoration: none;
+  z-index: 1000;
+  top: calc(17vw - 2vw);
+  left: calc(50% - 8.5vw);
+}
+
+.title-img {
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+
+.oval-button {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  pointer-events: auto;
+}
+
+.oval-link-left {
+  width: 46vw;
+  position: absolute;
+  left: calc(50% - 50vw);
+  top: calc(36vw );
+}
+
+.oval-link-right {
+  width: 46vw;
+  position: absolute;
+  left: calc(50% + 4vw);
+  top: calc(36vw );
+}
+
+.oval-sub-button {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+  pointer-events: auto;
+}
+
+.oval-link:hover {
+  /* transform: scale(1.001); */
+  cursor: pointer;
+}
+
+.oval-sub-link:hover {
+  transform: scale(1.01);
+  cursor: pointer;
+}
+
+.oval-link-left:hover {
+  transform: scale(1.01);
+}
+
+.oval-link-right:hover {
+  transform: scale(1.01);
+}
