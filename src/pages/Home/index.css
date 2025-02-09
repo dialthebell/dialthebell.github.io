@@ -1,94 +1,70 @@
 .home-container {
-  width: 100vw;
-  height: 100vh;
-  background-color: white;
+  width: 1400px;
+  height: 900px;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-.nav-buttons {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-}
-
-.oval-link {
-  width: 100vw;
-  position: relative;
-  text-decoration: none;
-  margin: 20px 0;
-}
-
-.oval-sub-link {
-  position: absolute;
-  width: 17vw;
-  height: auto;
-  cursor: pointer;
-  text-decoration: none;
-  z-index: 1000;
-  top: calc(17vw - 2vw);
-  left: calc(50% - 8.5vw);
 }
 
 .title-img {
-  width: 100vw;
+  max-width: 1200px;
+  margin-bottom: 40px;
   position: absolute;
-  top: 0;
+  z-index: 99;
+  pointer-events: none;
+}
+
+.dots-pattern-img {
+  position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 100;
+  bottom: 36px;
+  max-width: 1000px;
 }
 
-.oval-button {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  transition: transform 0.3s ease;
-  pointer-events: auto;
-}
-
-.oval-link-left {
-  width: 46vw;
+.oval-outside-button {
   position: absolute;
-  left: calc(50% - 50vw);
-  top: calc(36vw );
+  max-width: 1350px;
+  cursor: pointer;
+  top:36px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
 }
 
-.oval-link-right {
-  width: 46vw;
+.oval-inside-button {
   position: absolute;
-  left: calc(50% + 4vw);
-  top: calc(36vw );
-}
-
-.oval-sub-button {
-  width: 100%;
-  height: auto;
-  transition: transform 0.3s ease;
-  pointer-events: auto;
-}
-
-.oval-link:hover {
-  /* transform: scale(1.001); */
+  max-width: 300px;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-33%);
   cursor: pointer;
+  z-index: 9;
 }
 
-.oval-sub-link:hover {
-  transform: scale(1.01);
+.oval-sub-left-button {
+  position: absolute;
+  max-width: 600px;
+  bottom: 10px;
+  left: 0;
   cursor: pointer;
+  z-index: 10;
 }
 
-.oval-link-left:hover {
-  transform: scale(1.01);
+.oval-sub-right-button {
+  position: absolute;
+  max-width: 600px;
+  bottom: 10px;
+  right: 0;
+  cursor: pointer;
+  z-index: 10;
 }
 
-.oval-link-right:hover {
-  transform: scale(1.01);
+.camera-img {
+  position: absolute;
+  width: 80px;
+  top: 50%;
+  right: 20px;
+  cursor: pointer;
 }

@@ -1,63 +1,82 @@
-import React from "react";
 import { Link, useNavigate } from "react-router-dom";
+import Btn1Img from "/btn1.png";
+import Btn1DeepImg from "/btn1_deep.png";
+import Btn2Img from "/btn2.png";
+import Btn2DeepImg from "/btn2_deep.png";
+import Btn3Img from "/btn3.png";
+import Btn3DeepImg from "/btn3_deep.png";
+import Btn4Img from "/btn4.png";
+import Btn4DeepImg from "/btn4_deep.png";
+import DotsImg from "/dots.png";
+import TitleImg from "/title.png";
+import CameraImg from "/camera.png";
 import "./index.css";
+import { useState } from "react";
 
 function Home() {
   const navigate = useNavigate();
+  const [isBtn1Hover, setIsBtn1Hover] = useState(false);
+  const [isBtn2Hover, setIsBtn2Hover] = useState(false);
+  const [isBtn3Hover, setIsBtn3Hover] = useState(false);
+  const [isBtn4Hover, setIsBtn4Hover] = useState(false);
 
   const handleSubLinkClick = (e) => {
-    e.stopPropagation(); // 阻止事件冒泡
-    navigate("/page2"); // 手动导航到页面2
+    e.stopPropagation();
+    navigate("/Waiting");
   };
 
   return (
     <div className="home-container">
-      <nav className="nav-buttons">
-        <div className="title-text">
-          <img
-            src="/src/assets/images/title.png"
-            alt="title-text"
-            className="title-img"
-          />
-        </div>
-        <Link to="/page1" className="oval-link">
-          <img
-            src="/src/assets/images/btn1.png"
-            alt="按钮1"
-            className="oval-button"
-          />
-        </Link>
-        <Link
-          to="/page2"
-          className="oval-sub-link"
-        >
-          <img
-            src="/src/assets/images/btn2.png"
-            alt="按钮2"
+      <img src={TitleImg} alt="title-text" className="title-img" />
+      <Link
+        to="/Camera"
+        onMouseEnter={() => setIsBtn1Hover(true)}
+        onMouseLeave={() => setIsBtn1Hover(false)}
+      >
+        <img
+          src={isBtn1Hover ? Btn1DeepImg : Btn1Img}
+          alt="按钮1"
+          className="oval-outside-button"
+        />
+      </Link>
+      <Link
+        to="/Waiting"
+        onMouseEnter={() => setIsBtn2Hover(true)}
+        onMouseLeave={() => setIsBtn2Hover(false)}
+      >
+        <img
+          src={isBtn2Hover ? Btn2DeepImg : Btn2Img}
+          alt="按钮2"
           onClick={handleSubLinkClick}
+          className="oval-inside-button"
+        />
+      </Link>
 
-            className="oval-button"
-          />
-        </Link>
+      <img src={DotsImg} alt="dots" className="dots-pattern-img" />
+      <img src={CameraImg} alt="dots" className="camera-img" />
 
-        <div className="dots-pattern">
-          • • • • •<br />• • •<br />•
-        </div>
-        <Link to="/page3" className="oval-link-left">
-          <img
-            src="/src/assets/images/btn3.png"
-            alt="按钮3"
-            className="oval-sub-button"
-          />
-        </Link>
-        <Link to="/page4" className="oval-link-right">
-          <img
-            src="/src/assets/images/btn4.png"
-            alt="按钮4"
-            className="oval-sub-button"
-          />
-        </Link>
-      </nav>
+      <Link
+        to="/About"
+        onMouseEnter={() => setIsBtn3Hover(true)}
+        onMouseLeave={() => setIsBtn3Hover(false)}
+      >
+        <img
+          src={isBtn3Hover ? Btn3DeepImg : Btn3Img}
+          alt="按钮3"
+          className="oval-sub-left-button"
+        />
+      </Link>
+      <Link
+        to="/Authortity"
+        onMouseEnter={() => setIsBtn4Hover(true)}
+        onMouseLeave={() => setIsBtn4Hover(false)}
+      >
+        <img
+          src={isBtn4Hover ? Btn4DeepImg : Btn4Img}
+          alt="按钮4"
+          className="oval-sub-right-button"
+        />
+      </Link>
     </div>
   );
 }

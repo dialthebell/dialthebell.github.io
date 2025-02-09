@@ -1,0 +1,40 @@
+.about-container {
+  width: 1400px;
+  height: 900px;
+  position: relative;
+  overflow: hidden;
+}
+
+.content-left {
+  position: absolute;
+  max-width: 450px;
+  left: 26px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.content-top {
+  position: absolute;
+  max-width: 1000px;
+  top: 26px;
+  right: 55px;
+}
+
+.content-right {
+  position: absolute;
+  max-width: 1000px;
+  right: 25px;
+  top: 30%;
+}
+
+.back-btn {
+  position: absolute;
+  max-width: 130px;
+  left: 26px;
+  bottom: 4%;
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  transform: scale(1.05);
+}
