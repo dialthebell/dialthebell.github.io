@@ -1,17 +1,18 @@
 import { Link, useNavigate } from "react-router-dom";
-import Btn1Img from "/btn1.png";
-import Btn1DeepImg from "/btn1_deep.png";
-import Btn2Img from "/btn2.png";
-import Btn2DeepImg from "/btn2_deep.png";
-import Btn3Img from "/btn3.png";
-import Btn3DeepImg from "/btn3_deep.png";
-import Btn4Img from "/btn4.png";
-import Btn4DeepImg from "/btn4_deep.png";
-import DotsImg from "/dots.png";
-import TitleImg from "/title.png";
-import CameraImg from "/camera.png";
+import { useState, useEffect } from "react";
+import Btn1Img from "/Home/btn1.png";
+import Btn1DeepImg from "/Home/btn1_deep.png";
+import Btn2Img from "/Home/btn2.png";
+import Btn2DeepImg from "/Home/btn2_deep.png";
+import Btn3Img from "/Home/btn3.png";
+import Btn3DeepImg from "/Home/btn3_deep.png";
+import Btn4Img from "/Home/btn4.png";
+import Btn4DeepImg from "/Home/btn4_deep.png";
+import DotsImg from "/Home/dots.png";
+import TitleImg from "/Home/title.png";
+import CameraImg from "/Home/camera.png";
+import TipImg from "/Home/tip.png";
 import "./index.css";
-import { useState } from "react";
 
 function Home() {
   const navigate = useNavigate();
@@ -19,6 +20,28 @@ function Home() {
   const [isBtn2Hover, setIsBtn2Hover] = useState(false);
   const [isBtn3Hover, setIsBtn3Hover] = useState(false);
   const [isBtn4Hover, setIsBtn4Hover] = useState(false);
+  const [showTip, setShowTip] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowTip(true);
+
+      const hideTimer = setTimeout(() => {
+        setShowTip(false);
+
+        const intervalId = setInterval(() => {
+          setShowTip(true);
+
+          setTimeout(() => {
+            setShowTip(false);
+          }, 5000);
+        }, 360000);
+
+        return () => clearInterval(intervalId);
+      }, 5000);
+      return () => clearTimeout(hideTimer);
+    }, 5000);
+  }, []);
 
   const handleSubLinkClick = (e) => {
     e.stopPropagation();
@@ -40,7 +63,7 @@ function Home() {
         />
       </Link>
       <Link
-        to="/Waiting"
+        to="/About"
         onMouseEnter={() => setIsBtn2Hover(true)}
         onMouseLeave={() => setIsBtn2Hover(false)}
       >
@@ -54,9 +77,10 @@ function Home() {
 
       <img src={DotsImg} alt="dots" className="dots-pattern-img" />
       <img src={CameraImg} alt="dots" className="camera-img" />
+      {showTip && <img src={TipImg} alt="tip" className="tip-img" />}
 
       <Link
-        to="/About"
+        to="/Waiting"
         onMouseEnter={() => setIsBtn3Hover(true)}
         onMouseLeave={() => setIsBtn3Hover(false)}
       >

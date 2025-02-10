@@ -1,6 +1,70 @@
 .camera-container {
-  width: 100vw;
-  height: 100vh;
+  width: 1512px;
+  height: 982px;
   position: relative;
   overflow: hidden;
 }
+
+.title-img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.circle-img {
+  position: absolute;
+  width: 100%;
+  top: 45px;
+}
+
+.camera-img {
+  position: absolute;
+  width: 80px;
+  top: 50%;
+  right: 20px;
+  transform: translate(-20px,12px);
+}
+
+.save-img {
+  position: absolute;
+  width: 500px;
+  left: 10px;
+  bottom: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.danger-img {
+  position: absolute;
+  width: 500px;
+  right: 10px;
+  bottom: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.vote-img {
+  position: absolute;
+  width: 350px;
+  left: 50%;
+  bottom: 36px;
+  transform: translateX(-50%);
+}
+
+.word-img {
+  position: absolute;
+  width: 90%;
+  bottom: 50%;
+  transform: translate(-50%,50%);
+  left: 50%;
+
+}
+
+/* 添加悬停效果 */
+.save-img:hover,
+.danger-img:hover {
+  transform: translateY(-10px);
+}
+
+

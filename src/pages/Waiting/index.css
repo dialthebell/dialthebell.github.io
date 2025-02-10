@@ -1,6 +1,7 @@
 .waiting-container {
-  width: 100vw;
-  height: 100vh;
+  width: 1512px;
+  height: 982px;
   position: relative;
   overflow: hidden;
+  background-color: azure;
 }

@@ -1,6 +1,6 @@
 .home-container {
-  width: 1400px;
-  height: 900px;
+  width: 1512px;
+  height: 982px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -8,8 +8,8 @@
 }
 
 .title-img {
-  max-width: 1200px;
   margin-bottom: 40px;
+  width: 100%;
   position: absolute;
   z-index: 99;
   pointer-events: none;
@@ -19,25 +19,23 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 36px;
-  max-width: 1000px;
+  bottom: 40px;
+  width: 1200px;
 }
 
 .oval-outside-button {
   position: absolute;
-  max-width: 1350px;
+  width: 100%;
   cursor: pointer;
-  top:36px;
-  left: 50%;
+  top:52px;
   transform: translateX(-50%);
   z-index: 1;
 }
 
 .oval-inside-button {
   position: absolute;
-  max-width: 300px;
-  top: 150px;
-  left: 50%;
+  width: 300px;
+  top: 192px;
   transform: translateX(-33%);
   cursor: pointer;
   z-index: 9;
@@ -45,7 +43,7 @@
 
 .oval-sub-left-button {
   position: absolute;
-  max-width: 600px;
+  width: 660px;
   bottom: 10px;
   left: 0;
   cursor: pointer;
@@ -54,7 +52,7 @@
 
 .oval-sub-right-button {
   position: absolute;
-  max-width: 600px;
+  width:  660px;
   bottom: 10px;
   right: 0;
   cursor: pointer;
@@ -66,5 +64,13 @@
   width: 80px;
   top: 50%;
   right: 20px;
-  cursor: pointer;
+  transform: translate(-20px,12px);
+}
+
+.tip-img {
+  position: absolute;
+  width: 100%;
+  z-index: 99;
+  bottom: 10px;
+  pointer-events: none;
 }

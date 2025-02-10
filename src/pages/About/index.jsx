@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import ContentLeftImg from "/About-2.png";
-import ContentTopImg from "/About-1.png";
-import ContentRightImg from "/About-3.png";
-import BtnBackImg from "/btn_back.png";
+import ContentLeftImg from "/About/About-2.png";
+import ContentTopImg from "/About/About-1.png";
+import ContentRightImg from "/About/About-3.png";
+import BtnBackImg from "/About/btn_back.png";
 import "./index.css";
 
 function About() {
