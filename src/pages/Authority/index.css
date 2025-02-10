@@ -1,0 +1,145 @@
+.authority-container {
+  width: 1512px;
+  height: 982px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 信件图片样式 */
+.letter-img {
+  position: absolute;
+  width: 100%;
+}
+
+/* Back按钮样式 */
+.authority-btn-back {
+  position: absolute;
+  bottom: 25px;
+  left: 70px;
+  width: 500px;
+  cursor: pointer;
+}
+
+/* Ringing区域样式 */
+.authority-btn-1 {
+  position: absolute;
+  top: 55px;
+  right: 215px;
+  width: 700px;
+}
+
+.authority-btn-1-1 {
+  position: absolute;
+  right: 304px;
+  top: 185px;
+  width: 521px;
+  cursor: pointer;
+}
+
+.authority-btn-1-2 {
+  position: absolute;
+  right: 305px;
+  top: 258px;
+  width: 520px;
+  cursor: pointer;
+}
+
+/* Auto Reply区域样式 */
+.authority-btn-2 {
+  position: absolute;
+  left: 12px;
+  top: 186px;
+  width: 548px;
+}
+
+.authority-btn-2-1 {
+  position: absolute;
+  left: 80px;
+  top: 500px;
+  width: 186px;
+  cursor: pointer;
+}
+
+.authority-btn-2-2 {
+  position: absolute;
+  left: 220px;
+  top: 458px;
+  width: 190px;
+  cursor: pointer;
+}
+
+.authority-btn-3 {
+  position: absolute;
+  bottom: 300px;
+  right: 32px;
+  width: 600px;
+}
+
+.authority-btn-3-2,
+.authority-btn-3-3,
+.authority-btn-3-4 {
+  position: absolute;
+  bottom: 21px;
+  width: 454px;
+  cursor: pointer;
+}
+
+.authority-btn-3-2 {
+  right: 450px;
+  z-index: 100;
+}
+
+.authority-btn-3-3 {
+  right: 270px;
+  z-index: 50;
+
+}
+
+.authority-btn-3-4 {
+  right: 56px;
+  bottom: 31px;
+  width: 420px;
+  z-index: 10;
+}
+
+/* Bell和Key按钮样式 */
+.authority-btn-4 {
+  position: absolute;
+  bottom: 367px;
+  right: 820px;
+  width: 156px;
+  cursor: pointer;
+}
+
+.authority-btn-5 {
+  position: absolute;
+  top: 378px;
+  right: 65px;
+  width: 70px;
+  cursor: pointer;
+}
+
+/* 其他按钮样式 */
+.authority-btn-6 {
+  position: absolute;
+  right: 24px;
+  bottom: 166px;
+  width: 156px;
+  cursor: pointer;
+}
+
+/* 所有可点击元素添加hover效果 */
+[class*="btn-1-"]:hover {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+[class*="btn-2-"]:hover {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+[class*="btn-3-"]:hover {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}

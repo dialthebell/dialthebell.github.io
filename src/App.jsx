@@ -3,7 +3,7 @@ import Home from "./pages/Home";
 import Camera from "./pages/Camera";
 import Waiting from "./pages/Waiting";
 import About from "./pages/About";
-import Authortity from "./pages/Authortity";
+import Authority from "./pages/Authority";
 import "./App.css";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
           <Route path="/Camera" element={<Camera />} />
           <Route path="/Waiting" element={<Waiting />} />
           <Route path="/About" element={<About />} />
-          <Route path="/Authortity" element={<Authortity />} />
+          <Route path="/Authority" element={<Authority />} />
         </Routes>
       </div>
     </Router>

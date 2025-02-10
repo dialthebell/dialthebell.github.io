@@ -43,11 +43,6 @@ function Home() {
     }, 5000);
   }, []);
 
-  const handleSubLinkClick = (e) => {
-    e.stopPropagation();
-    navigate("/Waiting");
-  };
-
   return (
     <div className="home-container">
       <img src={TitleImg} alt="title-text" className="title-img" />
@@ -70,7 +65,6 @@ function Home() {
         <img
           src={isBtn2Hover ? Btn2DeepImg : Btn2Img}
           alt="按钮2"
-          onClick={handleSubLinkClick}
           className="oval-inside-button"
         />
       </Link>

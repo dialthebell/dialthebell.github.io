@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import ContentLeftImg from "/About/About-2.png";
-import ContentTopImg from "/About/About-1.png";
-import ContentRightImg from "/About/About-3.png";
+import ContentLeftImg from "/About/about-2.png";
+import ContentTopImg from "/About/about-1.png";
+import ContentRightImg from "/About/about-3.png";
 import BtnBackImg from "/About/btn_back.png";
 import "./index.css";
 
